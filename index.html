@@ -1,270 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panos — Backend Engineer for Hire</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
-            padding: 60px 40px;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        
-        .subtitle {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-        
-        .divider {
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #3498db, #2ecc71);
-            margin: 20px auto 40px;
-        }
-        
-        .section {
-            margin: 40px 0;
-            text-align: left;
-        }
-        
-        .section h2 {
-            font-size: 1.3em;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section p {
-            color: #555;
-            margin-bottom: 10px;
-            font-size: 0.95em;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        
-        .tech-tag {
-            background: #ecf0f1;
-            color: #2c3e50;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-        
-        .proof-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-left: 3px solid #3498db;
-            margin: 10px 0;
-            border-radius: 4px;
-        }
-        
-        .proof-item strong {
-            color: #2c3e50;
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .proof-item p {
-            font-size: 0.9em;
-            color: #666;
-            margin: 0;
-        }
-        
-        .rates {
-            background: #e8f8f5;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-        
-        .rates p {
-            font-size: 1em;
-            margin: 8px 0;
-            color: #27ae60;
-            font-weight: 500;
-        }
-        
-        .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-        
-        .contact-section h2 {
-            color: white;
-            margin-bottom: 15px;
-        }
-        
-        .contact-btn {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 12px 30px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 10px 0;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .github-link {
-            color: white;
-            text-decoration: underline;
-        }
-        
-        .github-link:hover {
-            opacity: 0.9;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            font-size: 0.85em;
-            color: #999;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            .subtitle {
-                font-size: 1em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panos — Backend Systems & Automation</title>
+  <style>
+    :root {
+      --bg1: #f5f7fb;
+      --bg2: #d8e1ef;
+      --text: #243447;
+      --muted: #5f6c7b;
+      --card: #ffffff;
+      --line: #e7edf5;
+      --soft: #f7fafc;
+      --accent: #3b82f6;
+      --accent-2: #7c3aed;
+      --success: #0f9d58;
+      --shadow: 0 14px 50px rgba(36, 52, 71, 0.12);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      padding: 32px 16px;
+    }
+
+    .shell {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 56px 40px 28px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.08);
+      color: #1d4ed8;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin: 16px auto 0;
+      max-width: 720px;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: var(--muted);
+    }
+
+    .divider {
+      width: 84px;
+      height: 4px;
+      border-radius: 999px;
+      margin: 28px auto 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .content {
+      padding: 32px 40px 46px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 20px;
+      align-items: start;
+      margin-top: 6px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      padding: 22px;
+    }
+
+    .panel.soft {
+      background: linear-gradient(180deg, #f7fbff, #f3f8ff);
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    p { margin: 0 0 12px; color: #304050; }
+    .muted { color: var(--muted); }
+
+    .bullets {
+      margin: 0;
+      padding-left: 20px;
+      color: #304050;
+    }
+    .bullets li { margin: 8px 0; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #eef3f8;
+      color: #2b3a4a;
+      font-size: 0.92rem;
+      border: 1px solid #e1e8f0;
+    }
+
+    .proof-item {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      padding: 16px 16px 14px;
+      background: var(--soft);
+      margin-bottom: 12px;
+    }
+
+    .proof-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .proof-item p { margin: 0; color: var(--muted); }
+
+    .offer {
+      border-radius: 18px;
+      border: 1px solid rgba(59,130,246,0.15);
+      background: linear-gradient(180deg, rgba(59,130,246,0.08), rgba(124,58,237,0.06));
+      padding: 20px;
+    }
+
+    .offer h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .price {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .price span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #dce5f0;
+      color: #27415a;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .cta {
+      margin-top: 24px;
+      border-radius: 18px;
+      padding: 28px 22px;
+      background: linear-gradient(135deg, #4f7cff, #7c3aed);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 10px;
+      color: white;
+      justify-content: center;
+      font-size: 1.35rem;
+    }
+
+    .cta p { color: rgba(255,255,255,0.92); }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 170px;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: #fff;
+      color: #4f46e5;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.28);
+    }
+
+    .footer {
+      padding: 16px 40px 36px;
+      text-align: center;
+      color: #7a8794;
+      font-size: 0.92rem;
+    }
+
+    .contact-line {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .contact-line a { color: #fff; font-weight: 700; }
+
+    @media (max-width: 760px) {
+      body { padding: 14px; }
+      .hero, .content, .footer { padding-left: 20px; padding-right: 20px; }
+      .grid { grid-template-columns: 1fr; }
+      .panel { padding: 18px; }
+      .buttons { flex-direction: column; }
+      .btn { width: 100%; min-width: 0; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
+  <main class="shell">
+    <section class="card">
+      <header class="hero">
+        <div class="eyebrow">Backend engineer available for contract work</div>
         <h1>Panos</h1>
-        <p class="subtitle">Backend Engineer • Real-Time Systems • Game Backends</p>
+        <p class="subtitle">I build backend systems, automations, and internal tools for small teams that need reliable software shipped quickly.</p>
         <div class="divider"></div>
-        
-        <!-- Available Now -->
-        <div class="section">
-            <h2>🎯 Available Now</h2>
-            <p>Contract backend work. Flexible hours. Start immediately.</p>
-        </div>
-        
-        <!-- Rates -->
-        <div class="rates">
-            <p>💰 €25–30/hour</p>
-            <p>⏰ 15–20 hrs/week</p>
-            <p>📍 Remote (Greece-based)</p>
-            <p>✅ Immediate start</p>
-        </div>
-        
-        <!-- What I Do -->
-        <div class="section">
-            <h2>💻 What I Do</h2>
-            <p>Backend systems for games, crypto, and indie products. Real-time data pipelines. APIs. Infrastructure.</p>
-            <div class="tech-stack">
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Async SQLAlchemy</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Redis</span>
-                <span class="tech-tag">WebSockets</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">CI/CD</span>
-                <span class="tech-tag">Monitoring</span>
+      </header>
+
+      <div class="content">
+        <div class="grid">
+          <div>
+            <div class="section">
+              <h2>What I do</h2>
+              <p>I help businesses remove manual work with software that is easy to operate and easy to maintain.</p>
+              <p class="muted">Typical projects: client portals, workflow automation, dashboards, APIs, admin tools, and backend integrations.</p>
+              <div class="tag-row">
+                <span class="tag">FastAPI</span>
+                <span class="tag">Django</span>
+                <span class="tag">Async SQLAlchemy</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Monitoring</span>
+              </div>
             </div>
-        </div>
-        
-        <!-- Proof -->
-        <div class="section">
-            <h2>🏆 Proof</h2>
-            
-            <div class="proof-item">
+
+            <div class="section">
+              <h2>Proof</h2>
+              <div class="proof-item">
                 <strong>Feedstream</strong>
-                <p>Real-time maritime AIS data pipeline. WebSocket ingestion, Redis caching, circuit breaking, Prometheus monitoring. Production-grade.</p>
-            </div>
-            
-            <div class="proof-item">
+                <p>Real-time AIS ingestion platform with WebSockets, Redis caching, circuit breakers, and monitoring. Built as a production-style backend service.</p>
+              </div>
+              <div class="proof-item">
                 <strong>Hutsix</strong>
-                <p>Game automation tool (YOLOX computer vision). 2 paying customers. Shipped on Gumroad. Technical depth + market validation.</p>
-            </div>
-            
-            <div class="proof-item">
+                <p>Automation product with paying customers and a shipped commercial release. Shows both engineering and product delivery.</p>
+              </div>
+              <div class="proof-item">
                 <strong>Agent-PR-Firewall</strong>
-                <p>GitHub App (TypeScript). Automated security checks. CI/CD integration. Production deployment.</p>
+                <p>GitHub App for PR policy checks and merge governance. Demonstrates automation, integrations, and production deployment.</p>
+              </div>
+              <p class="muted"><strong>Experience:</strong> 4 years in production backend development. Comfortable shipping systems that need to work reliably.</p>
             </div>
-            
-            <p style="margin-top: 15px; color: #666;"><strong>Experience:</strong> 4 years production backend development. Shipped multiple products with paying customers.</p>
+          </div>
+
+          <aside>
+            <div class="panel soft">
+              <div class="offer">
+                <h3>Starter offer: 2-week automation sprint</h3>
+                <p>Best for a company that needs one workflow fixed fast.</p>
+                <p class="muted">Includes discovery, implementation, deployment, and one revision round.</p>
+                <div class="price">
+                  <span>Fixed scope</span>
+                  <span>2 weeks</span>
+                  <span>€1,500 intro rate</span>
+                </div>
+              </div>
+
+              <div class="section" style="margin-top: 20px;">
+                <h2>Why me</h2>
+                <ul class="bullets">
+                  <li>I ship fast without overengineering.</li>
+                  <li>I have real production experience.</li>
+                  <li>I communicate clearly and can work remotely.</li>
+                  <li>I can take a problem from idea to deployment.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="section">
+              <h2>Availability</h2>
+              <div class="panel">
+                <p><strong>Remote:</strong> Greece-based</p>
+                <p><strong>Start:</strong> Immediate</p>
+                <p><strong>Hours:</strong> Flexible for contract work</p>
+                <p class="muted">Best fit: small businesses, agencies, and startups with a real operational problem.</p>
+              </div>
+            </div>
+          </aside>
         </div>
-        
-        <!-- Why Hire Me -->
-        <div class="section">
-            <h2>✨ Why?</h2>
-            <ul style="margin-left: 20px; color: #555;">
-                <li>Fast shipping. No overengineering.</li>
-                <li>Real production experience (not just tutorials).</li>
-                <li>Reliable & communicative. Flexible hours.</li>
-                <li>Specialized in game backends and real-time systems.</li>
-                <li>Available immediately. No onboarding lag.</li>
-            </ul>
-        </div>
-        
-        <!-- Contact -->
-        <div class="contact-section">
-            <h2>Ready to talk?</h2>
-            <p>I'm actively looking for contract work. Let's see if we're a fit.</p>
-            <a href="mailto:panpanageas@gmail.com" class="contact-btn">Email Me</a>
-            <p style="margin-top: 20px; font-size: 0.95em;">
-                <strong>GitHub:</strong> <a href="https://github.com/Archangel-77" class="github-link">github.com/Archangel-77</a>
-            </p>
-        </div>
-        
-        <div class="footer">
-            <p>Currently accepting contracts. Backend engineer, game dev enthusiast, open to interesting problems.</p>
-        </div>
-    </div>
+
+        <section class="cta">
+          <h2>Ready to talk?</h2>
+          <p>I am actively looking for contract work. Send a message and describe the workflow you want to improve.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="mailto:panpanageas@gmail.com?subject=Contract%20opportunity">Email Me</a>
+            <a class="btn btn-secondary" href="https://github.com/Archangel-77" target="_blank" rel="noreferrer">GitHub Profile</a>
+          </div>
+          <div class="contact-line">Preferred first message: 2–3 sentences about the problem, the team, and the timeline.</div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        Currently accepting contracts for backend systems, automation, and internal tools.
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
